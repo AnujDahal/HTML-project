@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <link rel="stylesheet" href="bootstrap.css"/>
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        
+        <style>
+            .back 
+            {
+                background-image: url("Pizza Food Hd Wallpaper.jpg")  ;
+                position:relative;
+                padding:0;
+                margin:0;
+                min-height:600px;
+
+                background-repeat:no-repeat;
+                background-size:100% 700px;
+                background-position: bottom center;
+                background-attachment:fixed;
+            }
+            #pad {
+                padding: 9px;
+            }
+        </style>
+        <script>
+        function validate()
+        {
+        var n=document.getElementById("name").value;
+        if(n===''||n===null)
+        {
+        alert("Name Is Necessary");
+        return false;
+        }
+        
+        else if(n.length<5)
+        {
+            alert("Name Too Short");
+            return false;
+         }
+         var n=document.getElementById("address").value;
+        if(n===''||n===null)
+        {
+        alert("Street Name Is Necessary");
+        return false;
+        }
+        var l=document.getElementById("landscape").value;
+        if(l===''|l===null)
+        {
+        alert("Landscape Is Necessary");
+        return false;
+        }
+         var m=document.getElementById("mobile").value;
+        {
+         if(isNaN(m))
+        {
+            alert("Numeric only");
+            return false;
+        }
+    }
+        var e=document.form1.email.value;
+         if(e===''||e===null)
+        {
+            e=document.getElementById("em").innerHTML="Enter Email address";
+        return false;
+        }
+      
+       var c=document.getElementById("city").value;
+         if(c==='')
+        {
+        alert("Select the Cuisines option");
+        return false;
+        }
+         var p=document.getElementById("password").value;
+        if(p===''||p===null)
+        {
+        alert("Password Not Inserted");
+        return false;
+        }
+        
+        else if(p.length<4||p.length>10)
+        {
+            alert("Invalid Password");
+            return false;
+         }
+         }</script>
+    </head>
+    <div class="back"></div>
+    <body>
+        <div class="back"></div>
+        <nav class="nav navbar-inverse navbar-fixed-top">
+                    <div class="container" id="pad">
+                        <div class="navbar-header">
+                            <label class="navbar-brand">MaMa Restaurant</label>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"></a></li>
+                        </ul>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="search your favourite food" /></div>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                        </ul>
+                        
+                    </div>
+                    
+                </nav>
+        <form action="Successfullpage.html" name="form1">
+            <div class="form-group col-md-11">
+
+                <table border="0" class="table table-striped table-hover" >
+                    <tr>
+                        <td>Restaurant name</td>
+                        <td><input type="text" class="form-control small" placeholder="Enter Your Resturant Name" id="name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Restaurant Street Name</td>
+                        <td><input type="text" class="form-control" placeholder="Restaurant's Steert name"id="address"/></td>
+                    </tr>
+                    <tr>
+                        <td>Landmark</td>
+                        <td><input type="text" class="form-control" placeholder="Landmark Near to your Restaurant"id="landscape"/></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number</td>
+                        <td><input type="text" class="form-control" placeholder="A phone number" id="mobile"/></td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td><input type="email" class="form-control" placeholder="Enter Your Email" value="email " /></td<span id="em"></span><br/>
+                    <td><input type="password" class="form-control" placeholder="password"id="password"/></td>
+                    </tr>
+                    <tr>
+                        <td>Are you the owner?</td>
+                        <td>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="" class="checkbox-inline"/>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cuisines</td>        
+                        <td>
+                            <label for="sel1">foods</label>
+                            <select class="form-control" id="city">
+                                <option>Italian</option>
+                                <option>Indian</option>
+                                <option>Chinese</option>
+                                <option>Mexican</option>
+                            </select></td> 
+                    </tr>
+                    <tr>
+                        <td>Features</td>
+                        <td><select multiple class="form-control">
+
+                                <option>Alcohol</option>
+                                <option>Bar</option>
+                                <option>Nightlife</option>
+                                <option>Dinner</option>
+                                <option>Lunch</option>
+                                <option>Online order</option>
+                                <option>Home delivery</option>
+                                
+                            </select>
+                        </td>
+                        <td><br/><br/>
+                        <td>    <input type="submit" class="btn btn-success" onclick="return validate()"/></td>
+                        <td>  <input type="reset"value="Reset"class="btn btn-danger"/>
+                        </td>
+                    </tr>
+                   
+
+                </table>
+            </div>
+        </form>
+          
+    </body>
+</html>

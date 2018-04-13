@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head> <title>Login page</title>
+        
+        
+        <link rel="stylesheet"href="bootstrap.css">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <style>
+     body{
+        background-image:url("Chicken.jpg");
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: 100% 900px;
+        background-position: bottom center;
+        background-attachment: fixed;
+        width: 100%;
+}
+        form{
+    width: 450px;
+    font-size: 20px;
+    background: aliceblue;
+    padding: 30px 30px 15px 30px;
+    border: 5px solid #53687E;
+    border-radius:  10%;
+    line-break: auto;
+            }</style>
+        <script>
+           
+          function validate()
+          {
+             var e=document.form1.email.value;
+         if(e===''||e===null)
+        {
+            e=document.getElementById("em").innerHTML="Enter Email address";
+        return false;
+        }
+        var n=document.getElementById("password").value;
+        if(n===''||n===null)
+        {
+        alert("Password Not Inserted");
+        return false;
+        }
+        
+        else if(n.length<4||n.length>10)
+        {
+            alert("Invalid Password");
+            return false;
+         }
+         
+       
+     }
+         </script>
+        
+    </head>
+    <body>
+        <nav class="nav navbar-inverse">
+        <div class="container">
+            <div class="navbar-header"><img src="1.jpg" width="70px">
+                <label class="navbar-brand">MaMa Restaurant</label>
+            </div>
+            <ul  class="nav navbar-nav">
+                <li><a href="home.html">Home</a</li>
+                <li><input type="text" placeholder="Search" /></li>   
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="tableRegis.html"> Register</a></li>
+        </ul>
+        </div>
+        </nav>
+       <center><h1>Login Page</h1></center>
+       
+       <center><form action ="home.html" name="form1" class="opacity">
+      Email<input type="email" id="email" placeholder="Input Valid email-id" class="form-control" /><span id="em"></span><br>
+<br/>
+            Password-<input type="password" placeholder="Password here"id="password" class="form-control"/><br/>
+ 
+            <input type="submit"value="Log In"class="btn btn-succe" onclick="return validate()"/>
+        </form></center>
+    </body>
+</html>
